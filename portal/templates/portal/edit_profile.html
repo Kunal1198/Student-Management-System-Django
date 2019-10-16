@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+{% load staticfiles %}
+  <link href="{% static 'css/material-kit.css' %}" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'css/demo.css' %}" />
+
+
+<div class="section section-contacts">
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto">
+            <h2 class="text-center title">Work with us</h2>
+            <h4 class="text-center description">Divide details about your product or agency work into parts. Write a few lines about each one and contact us about any further collaboration. We will responde get back to you in a couple of hours.</h4>
+            <form class="contact-form" method="post" action="">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Your Username</label>
+                     {{ user_profile.username }}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Your FirstName</label>
+
+                     {{ user_profile.first_name }}
+                    
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Your Lastname</label>
+                     {{ user_profile.last_name }}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Your Email</label>
+
+                     {{ user_profile.email }}
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col-md-4 ml-auto mr-auto text-center">
+                  <button class="btn btn-primary btn-raised" type="submit">
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      </body>
+</html>

@@ -1,0 +1,142 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+{% load staticfiles %}
+  <link href="{% static 'css/material-kit.css' %}" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'css/demo.css' %}" />
+
+
+<div class="section section-contacts">
+
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto">
+            <h2 class="text-center title">Proctor Form</h2>
+            <h4 class="text-center description"> We will responde get back to you in a couple of hours.</h4>
+            <form class="contact-form" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Name</label>
+                    {{ form.name }}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                  <label class="bmd-label-floating">Email</label>
+                     {{ form.email }}
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Mobile</label>
+                    {{ form.contact_no }}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Department</label>
+                     {{ form.dept }}
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="form-group">
+                <label for="exampleMessage" class="bmd-label-floating">Image</label>
+                  <img src="{{ form.image }}" width="200">
+              </div> -->
+              <div class="form-group">
+                <label for="exampleMessage" class="bmd-label-floating">Address</label>
+                  {{ form.address }}
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Father Name</label>
+                    {{ form.father_name }}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Mother Name</label>
+                     {{ form.mother_name }}
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Mobile</label>
+                    {{ form.mobile_no }}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Occupation</label>
+                     {{ form.parent_occu }}
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Annual Income</label>
+                    {{ form.parent_income }}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Education</label>
+                     {{ form.parent_qual }}
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Current CGPA</label>
+                    {{ form.current_cgpa }}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Average CGPA</label>
+                     {{ form.avg_cgpa }}
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">SSC Marks</label>
+                    {{ form.ssc_marks }}
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">HSC Marks</label>
+                     {{ form.hsc_marks }}
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleMessage" class="bmd-label-floating">Achievement</label>
+                  {{ form.stu_ach }}
+              </div>
+              <div class="row">
+                <div class="col-md-4 ml-auto mr-auto text-center">
+                  <button class="btn btn-primary btn-raised" type="submit">
+                    Submit Form
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      </body>
+</html>

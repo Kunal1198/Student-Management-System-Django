@@ -134,10 +134,7 @@ def teacher_dashboard(request):
 		form = DocumentForm(request.POST, request.FILES)
 		if form.is_valid():
 			form.save()
-			# send_mail('File','New file is uploaded.....Check here http://127.0.0.1:8000/polls/upload',
-			# 			'ipproject80@gmail.com',
-			# 			['justsport0@gmail.com'],
-			# 			fail_silently=False,)
+			# asd
 			return render(request, 'portal/teacher_dashboard.html')
 	else:
 		form = DocumentForm()

@@ -30,9 +30,6 @@ def student_signup(request):
 			# ID_No = form.cleaned_data['id1']
 			# first_name = form.cleaned_data['fn']
 			# last_name = form.cleaned_data['ln']
-			# email = form.cleaned_data['eid']
-			# department = form.cleaned_data['dept']
-			# username = form.cleaned_data['un']
 			# password1 = form.cleaned_data['pw1']
 			# password2 = form.cleaned_data['pw2']
 			user = form.save(commit=False)

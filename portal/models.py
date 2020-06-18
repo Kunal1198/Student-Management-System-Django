@@ -6,10 +6,6 @@ from datetime import datetime
 
 
 class User(AbstractUser):
-	ID_No=models.IntegerField(
-        unique=True,
-        validators=[MaxValueValidator(9999999999), MinValueValidator(1)]
-        )
 	department=models.CharField(max_length=50,null=False,blank=False)
 	is_student=models.BooleanField(default=False)
 	is_teacher=models.BooleanField(default=False)
